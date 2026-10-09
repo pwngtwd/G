@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useMail } from '../context/MailContext';
 import { AccountSheet } from './AccountSheet';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface HeaderProps {
   onToggleSidebar: () => void;
@@ -357,6 +358,8 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar }) => {
 
         {/* Right Zone: Supabase, Theme, Settings, Profile */}
         <div className="flex items-center gap-2 shrink-0">
+          <PWAInstallButton />
+
           <button
             onClick={() => setIsSupabaseModalOpen(true)}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-neutral-200 dark:border-[#383838] hover:border-[#0494f4] dark:hover:border-[#0494f4] bg-neutral-50 dark:bg-[#282828] text-xs font-semibold text-neutral-700 dark:text-neutral-200 transition-colors"

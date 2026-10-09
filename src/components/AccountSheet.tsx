@@ -11,6 +11,7 @@ import {
   Check,
 } from 'lucide-react';
 import { useMail } from '../context/MailContext';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface AccountSheetProps {
   isOpen: boolean;
@@ -97,6 +98,8 @@ export const AccountSheet: React.FC<AccountSheetProps> = ({ isOpen, onClose }) =
 
         {/* Quick Actions List */}
         <div className="space-y-1.5">
+          <PWAInstallButton className="w-full justify-center py-2.5" />
+
           {/* Supabase Status Button */}
           <button
             onClick={() => {

@@ -10,6 +10,7 @@ import { MobileDrawer } from './components/MobileDrawer';
 import { SupabaseModal } from './components/SupabaseModal';
 import { SettingsModal } from './components/SettingsModal';
 import { Toast } from './components/Toast';
+import { OfflineIndicator } from './components/OfflineIndicator';
 
 const MainLayout: React.FC = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -144,6 +145,9 @@ const MainLayout: React.FC = () => {
 
       {/* Toast Notification Container */}
       <Toast />
+
+      {/* PWA Offline Indicator */}
+      <OfflineIndicator />
     </div>
   );
 };
